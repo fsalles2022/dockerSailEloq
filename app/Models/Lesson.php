@@ -10,4 +10,9 @@ class Lesson extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'video'];
+
+    public function module()
+    {
+        return $this->belongsTo(Module::class);
+    }
 }
